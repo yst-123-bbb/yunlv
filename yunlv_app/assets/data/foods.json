@@ -1,0 +1,995 @@
+{
+  "北京": [
+    {
+      "name": "全聚德烤鸭店",
+      "address": "东城区前门大街30号",
+      "cuisine": "京菜",
+      "avg_price": 280,
+      "signature": "精品烤鸭、芥末鸭掌",
+      "tags": [
+        "正餐",
+        "不辣"
+      ],
+      "reviews": "4.5分 百年老字号",
+      "tips": "前门店最正宗需等位",
+      "likes": 180000
+    },
+    {
+      "name": "四季民福烤鸭店",
+      "address": "东城区前门东大街",
+      "cuisine": "京菜",
+      "avg_price": 185,
+      "signature": "精品烤鸭、宫保虾球",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.7分 本地人爱去",
+      "tips": "故宫店可看角楼性价比高",
+      "likes": 120000
+    },
+    {
+      "name": "庆丰包子铺",
+      "address": "西城区西单北大街",
+      "cuisine": "小吃",
+      "avg_price": 25,
+      "signature": "猪肉大葱包、炒肝",
+      "tags": [
+        "小吃",
+        "不辣"
+      ],
+      "reviews": "4.3分 北京老字号",
+      "tips": "早餐简餐好去处",
+      "likes": 95000
+    },
+    {
+      "name": "簋街胡大小龙虾",
+      "address": "东城区东直门内大街",
+      "cuisine": "川菜",
+      "avg_price": 168,
+      "signature": "麻辣小龙虾、馋嘴牛蛙",
+      "tags": [
+        "夜宵",
+        "重辣"
+      ],
+      "reviews": "4.5分 簋街排队王",
+      "tips": "整条街都是餐厅胡大最有名",
+      "likes": 145000
+    },
+    {
+      "name": "护国寺小吃",
+      "address": "西城区护国寺大街",
+      "cuisine": "北京小吃",
+      "avg_price": 35,
+      "signature": "驴打滚、豌豆黄、焦圈豆汁",
+      "tags": [
+        "小吃",
+        "不辣"
+      ],
+      "reviews": "4.4分 老北京小吃集合",
+      "tips": "豆汁是挑战项目",
+      "likes": 75000
+    },
+    {
+      "name": "南锣鼓巷小吃街",
+      "address": "东城区南锣鼓巷",
+      "cuisine": "创意小吃",
+      "avg_price": 45,
+      "signature": "文宇奶酪、炸酱面",
+      "tags": [
+        "小吃",
+        "不辣"
+      ],
+      "reviews": "4.3分 文艺胡同",
+      "tips": "胡同里有特色小店边走边吃",
+      "likes": 210000
+    }
+  ],
+  "上海": [
+    {
+      "name": "上海老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "上海特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "上海小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "上海特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "上海夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "广州": [
+    {
+      "name": "广州老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "广州特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "广州小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "广州特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "广州夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "深圳": [
+    {
+      "name": "深圳老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "深圳特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "深圳小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "深圳特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "深圳夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "成都": [
+    {
+      "name": "成都老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "成都特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "成都小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "成都特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "成都夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "长沙": [
+    {
+      "name": "炊烟·小炒黄牛肉",
+      "address": "芙蓉区黄兴中路88号",
+      "cuisine": "湘菜",
+      "avg_price": 85,
+      "signature": "小炒黄牛肉、皮蛋辣椒擂茄子",
+      "tags": [
+        "正餐",
+        "重辣"
+      ],
+      "reviews": "4.7分 排队常见",
+      "tips": "建议提前取号或避开晚餐高峰",
+      "likes": 45000
+    },
+    {
+      "name": "费大厨辣椒炒肉",
+      "address": "芙蓉区解放西路",
+      "cuisine": "湘菜",
+      "avg_price": 72,
+      "signature": "辣椒炒肉、香芋蒸排骨",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.6分 常年排队",
+      "tips": "辣椒炒肉配米饭绝了",
+      "likes": 38000
+    },
+    {
+      "name": "黑色经典臭豆腐",
+      "address": "天心区坡子街127号",
+      "cuisine": "小吃",
+      "avg_price": 15,
+      "signature": "臭豆腐、大香肠",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.5分 必打卡",
+      "tips": "10元5片外酥里嫩",
+      "likes": 128000
+    },
+    {
+      "name": "文和友老长沙龙虾馆",
+      "address": "天心区湘江中路36号",
+      "cuisine": "市井湘菜",
+      "avg_price": 138,
+      "signature": "口味虾、臭豆腐、糖油粑粑",
+      "tags": [
+        "夜宵",
+        "正餐",
+        "重辣"
+      ],
+      "reviews": "4.5分 复古市井风",
+      "tips": "超大面积市井风格超好拍照",
+      "likes": 89000
+    },
+    {
+      "name": "一盏灯",
+      "address": "芙蓉区蔡锷路",
+      "cuisine": "湘菜",
+      "avg_price": 78,
+      "signature": "鸭掌筋、酸萝卜炒肚丝",
+      "tags": [
+        "正餐",
+        "重辣"
+      ],
+      "reviews": "4.6分 地道家常味",
+      "tips": "辣度较高不能吃辣提前说",
+      "likes": 42000
+    },
+    {
+      "name": "茶颜悦色",
+      "address": "连锁(五一广场多家)",
+      "cuisine": "奶茶",
+      "avg_price": 18,
+      "signature": "幽兰拿铁、声声乌龙",
+      "tags": [
+        "小吃",
+        "不辣"
+      ],
+      "reviews": "4.8分 长沙必喝",
+      "tips": "几乎每条街都有不用排长队",
+      "likes": 320000
+    },
+    {
+      "name": "肆姐面粉馆",
+      "address": "芙蓉区坡子街",
+      "cuisine": "米粉",
+      "avg_price": 22,
+      "signature": "牛肉粉、肉丝粉",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.5分 老长沙早餐首选",
+      "tips": "24小时营业夜宵也能吃",
+      "likes": 25000
+    },
+    {
+      "name": "盟重烧烤",
+      "address": "天心区裕南街",
+      "cuisine": "烧烤",
+      "avg_price": 75,
+      "signature": "烤牛油、烤五花肉",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.6分 人气烧烤",
+      "tips": "烤牛油必点湘西小串风格",
+      "likes": 58000
+    }
+  ],
+  "杭州": [
+    {
+      "name": "杭州老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "杭州特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "杭州小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "杭州特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "杭州夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "西安": [
+    {
+      "name": "西安老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "西安特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "西安小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "西安特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "西安夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "三亚": [
+    {
+      "name": "三亚老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "三亚特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "三亚小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "三亚特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "三亚夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "厦门": [
+    {
+      "name": "厦门老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "厦门特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "厦门小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "厦门特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "厦门夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "青岛": [
+    {
+      "name": "青岛老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "青岛特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "青岛小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "青岛特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "青岛夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "丽江": [
+    {
+      "name": "丽江老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "丽江特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "丽江小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "丽江特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "丽江夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "大理": [
+    {
+      "name": "大理老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "大理特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "大理小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "大理特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "大理夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "昆明": [
+    {
+      "name": "昆明老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "昆明特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "昆明小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "昆明特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "昆明夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "哈尔滨": [
+    {
+      "name": "哈尔滨老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "哈尔滨特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "哈尔滨小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "哈尔滨特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "哈尔滨夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "重庆": [
+    {
+      "name": "重庆老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "重庆特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "重庆小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "重庆特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "重庆夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "武汉": [
+    {
+      "name": "武汉老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "武汉特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "武汉小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "武汉特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "武汉夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "南京": [
+    {
+      "name": "南京老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "南京特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "南京小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "南京特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "南京夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "苏州": [
+    {
+      "name": "苏州老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "苏州特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "苏州小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "苏州特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "苏州夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ],
+  "桂林": [
+    {
+      "name": "桂林老字号餐厅",
+      "address": "市中心美食街",
+      "cuisine": "当地特色菜",
+      "avg_price": 78,
+      "signature": "桂林特色菜",
+      "tags": [
+        "正餐",
+        "微辣"
+      ],
+      "reviews": "4.5分 游客推荐",
+      "tips": "招牌菜必点",
+      "likes": 20000
+    },
+    {
+      "name": "桂林小吃街",
+      "address": "步行街商圈",
+      "cuisine": "街头小吃",
+      "avg_price": 35,
+      "signature": "桂林特色小吃",
+      "tags": [
+        "小吃",
+        "微辣"
+      ],
+      "reviews": "4.3分 人气旺盛",
+      "tips": "边走边吃多种选择",
+      "likes": 35000
+    },
+    {
+      "name": "桂林夜市大排档",
+      "address": "美食夜市",
+      "cuisine": "烧烤",
+      "avg_price": 68,
+      "signature": "烤串海鲜小炒",
+      "tags": [
+        "夜宵",
+        "微辣"
+      ],
+      "reviews": "4.4分 当地人气",
+      "tips": "晚上最热闹注意卫生",
+      "likes": 28000
+    }
+  ]
+}

@@ -1,0 +1,953 @@
+:root {
+  --bg: #fff8f0;
+  --surface: #ffffff;
+  --fg: #1b2030;
+  --muted: #6f7684;
+  --border: #ffdcc6;
+  --accent: #ff4d2e;
+  --accent2: #00b8a9;
+  --accent3: #7a5cff;
+  --accent4: #ffb703;
+  --gradHero: linear-gradient(120deg, #ff7a18 0%, #ff2d75 52%, #7a5cff 100%);
+  --gradWarm: linear-gradient(135deg, #ffb703, #ff4d2e);
+  --gradCool: linear-gradient(135deg, #00b8a9, #3b82f6);
+  --radius: 14px;
+  --shadow: 0 6px 18px rgba(255, 77, 46, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.appTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.appNav {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.appMain {
+  flex: 1;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+  padding-bottom: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.planLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.cardTitle {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.errorBar {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border-left: 3px solid #d1242f;
+  border-radius: var(--radius);
+  background: rgba(209, 36, 47, 0.1);
+  color: #d1242f;
+  font-size: 14px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.fieldWide {
+  grid-column: 1 / -1;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.cityRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnPrimary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.btnGhost {
+  background: transparent;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.budgetTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.budgetTable th,
+.budgetTable td {
+  padding: 8px 4px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  font-weight: 400;
+}
+
+.budgetTable td {
+  text-align: right;
+}
+
+.budgetTotal th,
+.budgetTotal td {
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  z-index: 20;
+}
+
+.bottomNavItem {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.bottomNavItemActive {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.bottomNavItem svg {
+  display: block;
+  margin: 0 auto 2px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pageHeader h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.heroSearch {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.heroSearch input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--fg);
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.chipActive {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--surface);
+  font-weight: 600;
+}
+
+.gridCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.placeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--fg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.placeCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.placeCardTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.placeCardMeta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.commentCard {
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.commentText {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.commentMeta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.prefForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sliderPanel {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.sliderTab {
+  flex: 1;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: calc(var(--radius) - 4px);
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sliderTabActive {
+  background: var(--bg);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.chatList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 56vh;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.chatBubble {
+  max-width: 78%;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chatBubbleUser {
+  align-self: flex-end;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.chatBubbleBot {
+  align-self: flex-start;
+}
+
+.chatInputRow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.chatInputRow textarea {
+  flex: 1;
+  min-height: 52px;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.heroBanner {
+  background: var(--gradHero);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  box-shadow: var(--shadow);
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.heroSub {
+  margin: 6px 0 14px;
+  font-size: 14px;
+  opacity: 0.92;
+}
+
+.heroSearchLight {
+  display: flex;
+  gap: 8px;
+}
+
+.heroSearchLight input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 24px 0 12px;
+}
+
+.cityCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--fg);
+}
+
+.cityBadge {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.railScroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 6px;
+}
+
+.railItem {
+  flex: 0 0 78%;
+  scroll-snap-align: start;
+}
+
+.tagPill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(255, 77, 46, 0.12);
+  color: #c2410c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.statChip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.rankBadge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--gradWarm);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.placeImage {
+  position: relative;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 4px);
+  background: var(--bg);
+}
+
+.placeImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.placeImageFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #fff;
+}
+
+.placeImageInitial {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.placeImageLabel {
+  font-size: 12px;
+  opacity: 0.92;
+  padding: 0 8px;
+  text-align: center;
+}
+
+.skeletonBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeletonLine {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffe8d9, #fff3ea, #ffe8d9);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 92px;
+  transform: translateX(-50%);
+  z-index: 40;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  box-shadow: var(--shadow);
+}
+
+.toastInfo {
+  background: #1b2030;
+  color: #fff;
+}
+
+.toastSuccess {
+  background: var(--accent2);
+  color: #fff;
+}
+
+.toastError {
+  background: #d1242f;
+  color: #fff;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.compareGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.compareRow {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.tierCard {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.tierCardActive {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.tierRange {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.cutItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 13px;
+}
+
+.intensityBar {
+  display: flex;
+  gap: 4px;
+}
+
+.intensityLow {
+  background: var(--accent2);
+}
+
+.intensityMid {
+  background: var(--accent4);
+}
+
+.intensityHigh {
+  background: var(--accent);
+}
+
+.weatherPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dayProfileRow {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fadeIn {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.modeCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 18px 0 24px;
+}
+
+.modeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 18px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--fg);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.modeCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.modeCardActive {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, rgba(255, 77, 46, 0.1), rgba(255, 153, 0, 0.1));
+}
+
+.modeIcon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.modeTitle {
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.modeDesc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.modeCta {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.progressPanel {
+  padding: 22px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.progressBar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--bg);
+  overflow: hidden;
+  margin: 14px 0 16px;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gradWarm);
+  transition: width 0.4s ease;
+}
+
+.progressSteps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.progressStep {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.progressStep::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  box-sizing: border-box;
+}
+
+.progressStepDone {
+  color: var(--fg);
+}
+
+.progressStepDone::before {
+  content: "✓";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.progressStepActive {
+  color: var(--fg);
+  font-weight: 700;
+}
+
+.progressStepActive::before {
+  background: var(--gradWarm);
+  border-color: transparent;
+  animation: pulseDot 1.2s ease-in-out infinite;
+}
+
+.progressMeta {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.transferCard {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.transferLegs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.transferSave {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: 560px) {
+  .modeCards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .appHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+
+  .appMain {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cityRow {
+    grid-template-columns: 1fr 80px auto;
+  }
+
+  .summary {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .budgetTable th,
+  .budgetTable td {
+    padding: 6px 2px;
+  }
+}

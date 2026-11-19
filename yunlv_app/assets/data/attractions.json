@@ -1,0 +1,1230 @@
+{
+  "北京": [
+    {
+      "name": "故宫博物院",
+      "address": "东城区景山前街4号",
+      "ticket_price": 60,
+      "open_time": "08:30-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "明清两代皇宫，世界文化遗产，馆藏186万件文物",
+      "tips": "提前7天官网预约，午门进神武门出",
+      "indoor": false,
+      "likes": 185000
+    },
+    {
+      "name": "八达岭长城",
+      "address": "延庆区八达岭镇",
+      "ticket_price": 40,
+      "open_time": "07:30-17:30",
+      "tags": [
+        "人文古迹",
+        "自然风光"
+      ],
+      "features": "长城保存最完好一段，不到长城非好汉",
+      "tips": "北京北站高铁约30分钟直达，缆车省力",
+      "indoor": false,
+      "likes": 142000
+    },
+    {
+      "name": "天安门广场",
+      "address": "东城区长安街",
+      "ticket_price": 0,
+      "open_time": "05:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "世界最大城市广场，可观看升旗仪式",
+      "tips": "升旗需提前1天预约，安检禁带打火机",
+      "indoor": false,
+      "likes": 98000
+    },
+    {
+      "name": "颐和园",
+      "address": "海淀区新建宫门路",
+      "ticket_price": 30,
+      "open_time": "06:30-18:00",
+      "tags": [
+        "人文古迹",
+        "自然风光"
+      ],
+      "features": "皇家园林，昆明湖万寿山长廊彩绘，世界遗产",
+      "tips": "建议游览3小时，联票60元含佛香阁",
+      "indoor": false,
+      "likes": 72000
+    },
+    {
+      "name": "天坛公园",
+      "address": "东城区天坛东路",
+      "ticket_price": 15,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "明清皇帝祭天场所，祈年殿回音壁设计精妙",
+      "tips": "联票34元含祈年殿，早上当地人晨练很有味道",
+      "indoor": false,
+      "likes": 58000
+    },
+    {
+      "name": "798艺术区",
+      "address": "朝阳区酒仙桥路",
+      "ticket_price": 0,
+      "open_time": "10:00-18:00",
+      "tags": [
+        "网红打卡"
+      ],
+      "features": "老工厂改造当代艺术区，画廊咖啡馆雕塑",
+      "tips": "大多数画廊免费，适合文艺青年拍照",
+      "indoor": true,
+      "likes": 65000
+    },
+    {
+      "name": "三里屯太古里",
+      "address": "朝阳区工体北路",
+      "ticket_price": 0,
+      "open_time": "10:00-22:00",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "北京最潮流商圈国际品牌酒吧街美食餐厅",
+      "tips": "晚上最热闹，周边有很多优质餐厅",
+      "indoor": true,
+      "likes": 88000
+    }
+  ],
+  "上海": [
+    {
+      "name": "外滩",
+      "address": "黄浦区中山东一路",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "自然风光"
+      ],
+      "features": "黄浦江畔万国建筑博览群，对岸陆家嘴天际线",
+      "tips": "晚上灯光秀最美，可乘浦江游轮",
+      "indoor": false,
+      "likes": 156000
+    },
+    {
+      "name": "南京路步行街",
+      "address": "黄浦区南京东路",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "购物",
+        "美食文化"
+      ],
+      "features": "中华商业第一街老字号林立",
+      "tips": "步行到外滩，沿途有很多老字号美食",
+      "indoor": false,
+      "likes": 98000
+    },
+    {
+      "name": "东方明珠",
+      "address": "浦东新区世纪大道",
+      "ticket_price": 180,
+      "open_time": "08:30-21:30",
+      "tags": [
+        "网红打卡"
+      ],
+      "features": "上海地标电视塔，可俯瞰黄浦江两岸",
+      "tips": "建议傍晚去同时看日景和夜景",
+      "indoor": true,
+      "likes": 89000
+    },
+    {
+      "name": "豫园城隍庙",
+      "address": "黄浦区福佑路",
+      "ticket_price": 40,
+      "open_time": "09:00-16:30",
+      "tags": [
+        "人文古迹",
+        "美食文化"
+      ],
+      "features": "江南古典园林，老上海小吃聚集地",
+      "tips": "南翔小笼包必吃，节假日人多",
+      "indoor": false,
+      "likes": 76000
+    },
+    {
+      "name": "迪士尼乐园",
+      "address": "浦东新区川沙新镇",
+      "ticket_price": 475,
+      "open_time": "08:30-20:30",
+      "tags": [
+        "主题乐园"
+      ],
+      "features": "中国第一座迪士尼主题乐园",
+      "tips": "建议两天，提前APP买快速通行证",
+      "indoor": false,
+      "likes": 128000
+    },
+    {
+      "name": "田子坊",
+      "address": "黄浦区泰康路",
+      "ticket_price": 0,
+      "open_time": "10:00-22:00",
+      "tags": [
+        "网红打卡"
+      ],
+      "features": "上海老弄堂改造创意园区",
+      "tips": "适合拍照逛街，有很多特色小店",
+      "indoor": false,
+      "likes": 65000
+    }
+  ],
+  "广州": [
+    {
+      "name": "广州博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解广州历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "广州步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "广州最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "广州公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "广州古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "深圳": [
+    {
+      "name": "深圳博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解深圳历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "深圳步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "深圳最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "深圳公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "深圳古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "成都": [
+    {
+      "name": "成都博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解成都历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "成都步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "成都最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "成都公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "成都古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "长沙": [
+    {
+      "name": "橘子洲",
+      "address": "岳麓区橘子洲头",
+      "ticket_price": 0,
+      "open_time": "07:00-22:00",
+      "tags": [
+        "网红打卡",
+        "自然风光"
+      ],
+      "features": "湘江中心江心岛，青年毛泽东雕像，免费乘地铁直达",
+      "tips": "傍晚去最美，有灯光音乐喷泉，可租自行车环岛",
+      "indoor": false,
+      "likes": 45200
+    },
+    {
+      "name": "岳麓山+岳麓书院",
+      "address": "岳麓区登高路",
+      "ticket_price": 50,
+      "open_time": "06:00-23:00",
+      "tags": [
+        "人文古迹",
+        "自然风光"
+      ],
+      "features": "千年学府岳麓书院+南岳衡山72峰之一，爱晚亭红叶",
+      "tips": "书院单独门票50元，建议早上登山凉爽",
+      "indoor": false,
+      "likes": 38900
+    },
+    {
+      "name": "湖南博物院",
+      "address": "开福区东风路",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00(周一闭馆)",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "马王堆汉墓出土文物，辛追夫人遗体，国家一级博物馆",
+      "tips": "需提前3天公众号预约免费，讲解器20元",
+      "indoor": true,
+      "likes": 29800
+    },
+    {
+      "name": "IFS国金中心+黄兴路步行街",
+      "address": "芙蓉区解放西路",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡"
+      ],
+      "features": "长沙最繁华商圈，IFS楼顶kaws雕塑，小吃一条街",
+      "tips": "晚上最热闹，排队拍照约20分钟",
+      "indoor": true,
+      "likes": 62300
+    },
+    {
+      "name": "太平老街+坡子街",
+      "address": "天心区",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "美食文化"
+      ],
+      "features": "长沙老街区，贾谊故居，整条街都是臭豆腐和小吃",
+      "tips": "晚上去最有氛围，一次性可吃多种小吃",
+      "indoor": false,
+      "likes": 41500
+    },
+    {
+      "name": "湘江夜游",
+      "address": "湘江沿岸码头",
+      "ticket_price": 158,
+      "open_time": "19:00-21:30",
+      "tags": [
+        "网红打卡"
+      ],
+      "features": "乘船游湘江，两岸灯光秀，杜甫江阁夜景尽收眼底",
+      "tips": "19:30班次日落夜景双重体验最佳",
+      "indoor": false,
+      "likes": 22100
+    },
+    {
+      "name": "世界之窗",
+      "address": "开福区三一大道",
+      "ticket_price": 200,
+      "open_time": "09:00-22:00",
+      "tags": [
+        "主题乐园"
+      ],
+      "features": "仿世界名胜建筑+过山车等游乐设施",
+      "tips": "建议一整天，节假日人多",
+      "indoor": false,
+      "likes": 25400
+    }
+  ],
+  "杭州": [
+    {
+      "name": "杭州博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解杭州历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "杭州步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "杭州最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "杭州公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "杭州古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "西安": [
+    {
+      "name": "西安博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解西安历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "西安步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "西安最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "西安公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "西安古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "三亚": [
+    {
+      "name": "三亚博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解三亚历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "三亚步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "三亚最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "三亚公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "三亚古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "厦门": [
+    {
+      "name": "厦门博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解厦门历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "厦门步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "厦门最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "厦门公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "厦门古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "青岛": [
+    {
+      "name": "青岛博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解青岛历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "青岛步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "青岛最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "青岛公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "青岛古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "丽江": [
+    {
+      "name": "丽江博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解丽江历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "丽江步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "丽江最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "丽江公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "丽江古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "大理": [
+    {
+      "name": "大理博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解大理历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "大理步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "大理最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "大理公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "大理古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "昆明": [
+    {
+      "name": "昆明博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解昆明历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "昆明步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "昆明最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "昆明公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "昆明古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "哈尔滨": [
+    {
+      "name": "哈尔滨博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解哈尔滨历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "哈尔滨步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "哈尔滨最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "哈尔滨公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "哈尔滨古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "重庆": [
+    {
+      "name": "重庆博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解重庆历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "重庆步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "重庆最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "重庆公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "重庆古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "武汉": [
+    {
+      "name": "武汉博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解武汉历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "武汉步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "武汉最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "武汉公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "武汉古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "南京": [
+    {
+      "name": "南京博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解南京历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "南京步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "南京最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "南京公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "南京古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "苏州": [
+    {
+      "name": "苏州博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解苏州历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "苏州步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "苏州最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "苏州公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "苏州古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ],
+  "桂林": [
+    {
+      "name": "桂林博物馆",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "09:00-17:00",
+      "tags": [
+        "人文古迹"
+      ],
+      "features": "了解桂林历史文化",
+      "tips": "周一闭馆，建议提前预约",
+      "indoor": true,
+      "likes": 20000
+    },
+    {
+      "name": "桂林步行街",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "全天",
+      "tags": [
+        "网红打卡",
+        "购物"
+      ],
+      "features": "桂林最热闹商业街",
+      "tips": "晚上人多注意保管财物",
+      "indoor": false,
+      "likes": 30000
+    },
+    {
+      "name": "桂林公园",
+      "address": "市中心",
+      "ticket_price": 0,
+      "open_time": "06:00-22:00",
+      "tags": [
+        "自然风光"
+      ],
+      "features": "市民休闲好去处",
+      "tips": "免费开放，早晨空气好",
+      "indoor": false,
+      "likes": 15000
+    },
+    {
+      "name": "桂林古城景区",
+      "address": "老城区",
+      "ticket_price": 50,
+      "open_time": "08:00-22:00",
+      "tags": [
+        "人文古迹",
+        "网红打卡"
+      ],
+      "features": "古建筑群感受历史韵味",
+      "tips": "傍晚开灯后最美",
+      "indoor": false,
+      "likes": 25000
+    }
+  ]
+}

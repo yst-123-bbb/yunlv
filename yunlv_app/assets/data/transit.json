@@ -1,0 +1,658 @@
+{
+  "train_routes": {
+    "北京-上海": [
+      {
+        "train_no": "G1",
+        "dep_station": "北京南",
+        "arr_station": "上海虹桥",
+        "dep_time": "09:00",
+        "arr_time": "13:28",
+        "duration": "4h28m",
+        "second_seat": 553,
+        "first_seat": 933
+      },
+      {
+        "train_no": "G3",
+        "dep_station": "北京南",
+        "arr_station": "上海虹桥",
+        "dep_time": "14:00",
+        "arr_time": "18:28",
+        "duration": "4h28m",
+        "second_seat": 553,
+        "first_seat": 933
+      },
+      {
+        "train_no": "G5",
+        "dep_station": "北京南",
+        "arr_station": "上海虹桥",
+        "dep_time": "17:00",
+        "arr_time": "21:28",
+        "duration": "4h28m",
+        "second_seat": 553,
+        "first_seat": 933
+      },
+      {
+        "train_no": "G7",
+        "dep_station": "北京南",
+        "arr_station": "上海虹桥",
+        "dep_time": "19:00",
+        "arr_time": "23:28",
+        "duration": "4h28m",
+        "second_seat": 553,
+        "first_seat": 933
+      },
+      {
+        "train_no": "G11",
+        "dep_station": "北京南",
+        "arr_station": "上海虹桥",
+        "dep_time": "08:00",
+        "arr_time": "12:28",
+        "duration": "4h28m",
+        "second_seat": 553,
+        "first_seat": 933
+      }
+    ],
+    "北京-长沙": [
+      {
+        "train_no": "G305",
+        "dep_station": "北京西",
+        "arr_station": "长沙南",
+        "dep_time": "08:00",
+        "arr_time": "14:10",
+        "duration": "6h10m",
+        "second_seat": 649,
+        "first_seat": 1038
+      },
+      {
+        "train_no": "G71",
+        "dep_station": "北京西",
+        "arr_station": "长沙南",
+        "dep_time": "10:00",
+        "arr_time": "16:10",
+        "duration": "6h10m",
+        "second_seat": 649,
+        "first_seat": 1038
+      },
+      {
+        "train_no": "G83",
+        "dep_station": "北京西",
+        "arr_station": "长沙南",
+        "dep_time": "13:00",
+        "arr_time": "19:10",
+        "duration": "6h10m",
+        "second_seat": 649,
+        "first_seat": 1038
+      },
+      {
+        "train_no": "G85",
+        "dep_station": "北京西",
+        "arr_station": "长沙南",
+        "dep_time": "15:30",
+        "arr_time": "21:40",
+        "duration": "6h10m",
+        "second_seat": 649,
+        "first_seat": 1038
+      }
+    ],
+    "北京-广州": [
+      {
+        "train_no": "G69",
+        "dep_station": "北京西",
+        "arr_station": "广州南",
+        "dep_time": "09:00",
+        "arr_time": "17:38",
+        "duration": "8h38m",
+        "second_seat": 862,
+        "first_seat": 1380
+      },
+      {
+        "train_no": "G67",
+        "dep_station": "北京西",
+        "arr_station": "广州南",
+        "dep_time": "12:00",
+        "arr_time": "20:38",
+        "duration": "8h38m",
+        "second_seat": 862,
+        "first_seat": 1380
+      },
+      {
+        "train_no": "G79",
+        "dep_station": "北京西",
+        "arr_station": "广州南",
+        "dep_time": "14:00",
+        "arr_time": "22:38",
+        "duration": "8h38m",
+        "second_seat": 862,
+        "first_seat": 1380
+      }
+    ],
+    "北京-成都": [
+      {
+        "train_no": "G89",
+        "dep_station": "北京西",
+        "arr_station": "成都东",
+        "dep_time": "09:00",
+        "arr_time": "17:35",
+        "duration": "8h35m",
+        "second_seat": 864,
+        "first_seat": 1384
+      },
+      {
+        "train_no": "G307",
+        "dep_station": "北京西",
+        "arr_station": "成都东",
+        "dep_time": "11:00",
+        "arr_time": "19:35",
+        "duration": "8h35m",
+        "second_seat": 864,
+        "first_seat": 1384
+      }
+    ],
+    "北京-西安": [
+      {
+        "train_no": "G87",
+        "dep_station": "北京西",
+        "arr_station": "西安北",
+        "dep_time": "09:00",
+        "arr_time": "13:30",
+        "duration": "4h30m",
+        "second_seat": 515,
+        "first_seat": 824
+      },
+      {
+        "train_no": "G651",
+        "dep_station": "北京西",
+        "arr_station": "西安北",
+        "dep_time": "11:00",
+        "arr_time": "15:30",
+        "duration": "4h30m",
+        "second_seat": 515,
+        "first_seat": 824
+      },
+      {
+        "train_no": "G655",
+        "dep_station": "北京西",
+        "arr_station": "西安北",
+        "dep_time": "14:00",
+        "arr_time": "18:30",
+        "duration": "4h30m",
+        "second_seat": 515,
+        "first_seat": 824
+      },
+      {
+        "train_no": "G659",
+        "dep_station": "北京西",
+        "arr_station": "西安北",
+        "dep_time": "17:00",
+        "arr_time": "21:30",
+        "duration": "4h30m",
+        "second_seat": 515,
+        "first_seat": 824
+      }
+    ],
+    "北京-武汉": [
+      {
+        "train_no": "G401",
+        "dep_station": "北京西",
+        "arr_station": "武汉",
+        "dep_time": "08:00",
+        "arr_time": "12:30",
+        "duration": "4h30m",
+        "second_seat": 520,
+        "first_seat": 832
+      },
+      {
+        "train_no": "G403",
+        "dep_station": "北京西",
+        "arr_station": "武汉",
+        "dep_time": "11:00",
+        "arr_time": "15:30",
+        "duration": "4h30m",
+        "second_seat": 520,
+        "first_seat": 832
+      },
+      {
+        "train_no": "G405",
+        "dep_station": "北京西",
+        "arr_station": "武汉",
+        "dep_time": "14:00",
+        "arr_time": "18:30",
+        "duration": "4h30m",
+        "second_seat": 520,
+        "first_seat": 832
+      }
+    ],
+    "北京-哈尔滨": [
+      {
+        "train_no": "G901",
+        "dep_station": "北京南",
+        "arr_station": "哈尔滨西",
+        "dep_time": "08:00",
+        "arr_time": "14:30",
+        "duration": "6h30m",
+        "second_seat": 541,
+        "first_seat": 866
+      },
+      {
+        "train_no": "G393",
+        "dep_station": "北京南",
+        "arr_station": "哈尔滨西",
+        "dep_time": "12:00",
+        "arr_time": "18:30",
+        "duration": "6h30m",
+        "second_seat": 541,
+        "first_seat": 866
+      }
+    ],
+    "上海-长沙": [
+      {
+        "train_no": "G1371",
+        "dep_station": "上海虹桥",
+        "arr_station": "长沙南",
+        "dep_time": "08:00",
+        "arr_time": "13:00",
+        "duration": "5h00m",
+        "second_seat": 478,
+        "first_seat": 768
+      },
+      {
+        "train_no": "G1373",
+        "dep_station": "上海虹桥",
+        "arr_station": "长沙南",
+        "dep_time": "11:00",
+        "arr_time": "16:00",
+        "duration": "5h00m",
+        "second_seat": 478,
+        "first_seat": 768
+      },
+      {
+        "train_no": "G1375",
+        "dep_station": "上海虹桥",
+        "arr_station": "长沙南",
+        "dep_time": "14:00",
+        "arr_time": "19:00",
+        "duration": "5h00m",
+        "second_seat": 478,
+        "first_seat": 768
+      },
+      {
+        "train_no": "G1377",
+        "dep_station": "上海虹桥",
+        "arr_station": "长沙南",
+        "dep_time": "17:00",
+        "arr_time": "22:00",
+        "duration": "5h00m",
+        "second_seat": 478,
+        "first_seat": 768
+      }
+    ],
+    "上海-广州": [
+      {
+        "train_no": "G99",
+        "dep_station": "上海虹桥",
+        "arr_station": "广州南",
+        "dep_time": "10:00",
+        "arr_time": "17:30",
+        "duration": "7h30m",
+        "second_seat": 793,
+        "first_seat": 1302
+      },
+      {
+        "train_no": "G1301",
+        "dep_station": "上海虹桥",
+        "arr_station": "广州南",
+        "dep_time": "14:00",
+        "arr_time": "21:30",
+        "duration": "7h30m",
+        "second_seat": 793,
+        "first_seat": 1302
+      }
+    ],
+    "上海-成都": [
+      {
+        "train_no": "G1974",
+        "dep_station": "上海虹桥",
+        "arr_station": "成都东",
+        "dep_time": "07:00",
+        "arr_time": "17:53",
+        "duration": "10h53m",
+        "second_seat": 1033,
+        "first_seat": 1648
+      },
+      {
+        "train_no": "G2189",
+        "dep_station": "上海虹桥",
+        "arr_station": "成都东",
+        "dep_time": "10:00",
+        "arr_time": "20:53",
+        "duration": "10h53m",
+        "second_seat": 1033,
+        "first_seat": 1648
+      }
+    ],
+    "广州-长沙": [
+      {
+        "train_no": "G1312",
+        "dep_station": "广州南",
+        "arr_station": "长沙南",
+        "dep_time": "08:00",
+        "arr_time": "10:30",
+        "duration": "2h30m",
+        "second_seat": 314,
+        "first_seat": 504
+      },
+      {
+        "train_no": "G1314",
+        "dep_station": "广州南",
+        "arr_station": "长沙南",
+        "dep_time": "11:00",
+        "arr_time": "13:30",
+        "duration": "2h30m",
+        "second_seat": 314,
+        "first_seat": 504
+      },
+      {
+        "train_no": "G1316",
+        "dep_station": "广州南",
+        "arr_station": "长沙南",
+        "dep_time": "14:00",
+        "arr_time": "16:30",
+        "duration": "2h30m",
+        "second_seat": 314,
+        "first_seat": 504
+      }
+    ],
+    "长沙-广州": [
+      {
+        "train_no": "G1312",
+        "dep_station": "长沙南",
+        "arr_station": "广州南",
+        "dep_time": "11:00",
+        "arr_time": "13:30",
+        "duration": "2h30m",
+        "second_seat": 314,
+        "first_seat": 504
+      },
+      {
+        "train_no": "G1314",
+        "dep_station": "长沙南",
+        "arr_station": "广州南",
+        "dep_time": "14:00",
+        "arr_time": "16:30",
+        "duration": "2h30m",
+        "second_seat": 314,
+        "first_seat": 504
+      }
+    ]
+  },
+  "airlines": [
+    {
+      "code": "CA",
+      "name": "国航",
+      "group": "星空联盟",
+      "baggage": "免费托运:手提7kg+托运30kg免费"
+    },
+    {
+      "code": "MU",
+      "name": "东航",
+      "group": "天合联盟",
+      "baggage": "免费托运:手提7kg+托运20kg免费"
+    },
+    {
+      "code": "CZ",
+      "name": "南航",
+      "group": "天合联盟",
+      "baggage": "免费托运:手提7kg+托运20kg免费"
+    },
+    {
+      "code": "HU",
+      "name": "海航",
+      "group": "非联盟",
+      "baggage": "免费托运:手提7kg+托运20kg免费"
+    },
+    {
+      "code": "3U",
+      "name": "川航",
+      "group": "非联盟",
+      "baggage": "免费托运:手提7kg+托运20kg免费"
+    },
+    {
+      "code": "ZH",
+      "name": "深航",
+      "group": "星空联盟",
+      "baggage": "免费托运:手提7kg+托运20kg免费"
+    },
+    {
+      "code": "FM",
+      "name": "上航",
+      "group": "星空联盟",
+      "baggage": "免费托运:手提7kg+托运20kg免费"
+    },
+    {
+      "code": "SC",
+      "name": "山航",
+      "group": "星空联盟",
+      "baggage": "免费托运:手提7kg+托运20kg免费"
+    }
+  ],
+  "flight_routes": [
+    {
+      "departure": "北京",
+      "destination": "长沙",
+      "duration": "2h30m",
+      "base_price": 980,
+      "hours": 2,
+      "minutes": 30
+    },
+    {
+      "departure": "北京",
+      "destination": "上海",
+      "duration": "2h10m",
+      "base_price": 780,
+      "hours": 2,
+      "minutes": 10
+    },
+    {
+      "departure": "北京",
+      "destination": "广州",
+      "duration": "3h10m",
+      "base_price": 1280,
+      "hours": 3,
+      "minutes": 10
+    },
+    {
+      "departure": "北京",
+      "destination": "成都",
+      "duration": "2h50m",
+      "base_price": 1180,
+      "hours": 2,
+      "minutes": 50
+    },
+    {
+      "departure": "北京",
+      "destination": "杭州",
+      "duration": "2h20m",
+      "base_price": 880,
+      "hours": 2,
+      "minutes": 20
+    },
+    {
+      "departure": "北京",
+      "destination": "西安",
+      "duration": "2h15m",
+      "base_price": 880,
+      "hours": 2,
+      "minutes": 15
+    },
+    {
+      "departure": "北京",
+      "destination": "三亚",
+      "duration": "4h00m",
+      "base_price": 1880,
+      "hours": 4,
+      "minutes": 0
+    },
+    {
+      "departure": "北京",
+      "destination": "昆明",
+      "duration": "3h40m",
+      "base_price": 1580,
+      "hours": 3,
+      "minutes": 40
+    },
+    {
+      "departure": "北京",
+      "destination": "厦门",
+      "duration": "2h50m",
+      "base_price": 1180,
+      "hours": 2,
+      "minutes": 50
+    },
+    {
+      "departure": "上海",
+      "destination": "成都",
+      "duration": "3h20m",
+      "base_price": 1080,
+      "hours": 3,
+      "minutes": 20
+    },
+    {
+      "departure": "上海",
+      "destination": "广州",
+      "duration": "2h45m",
+      "base_price": 980,
+      "hours": 2,
+      "minutes": 45
+    },
+    {
+      "departure": "上海",
+      "destination": "长沙",
+      "duration": "2h20m",
+      "base_price": 880,
+      "hours": 2,
+      "minutes": 20
+    },
+    {
+      "departure": "上海",
+      "destination": "三亚",
+      "duration": "3h30m",
+      "base_price": 1680,
+      "hours": 3,
+      "minutes": 30
+    },
+    {
+      "departure": "上海",
+      "destination": "西安",
+      "duration": "2h40m",
+      "base_price": 1080,
+      "hours": 2,
+      "minutes": 40
+    },
+    {
+      "departure": "广州",
+      "destination": "成都",
+      "duration": "2h30m",
+      "base_price": 980,
+      "hours": 2,
+      "minutes": 30
+    },
+    {
+      "departure": "广州",
+      "destination": "杭州",
+      "duration": "2h15m",
+      "base_price": 880,
+      "hours": 2,
+      "minutes": 15
+    },
+    {
+      "departure": "长沙",
+      "destination": "北京",
+      "duration": "2h30m",
+      "base_price": 980,
+      "hours": 2,
+      "minutes": 30
+    },
+    {
+      "departure": "长沙",
+      "destination": "上海",
+      "duration": "2h00m",
+      "base_price": 780,
+      "hours": 2,
+      "minutes": 0
+    },
+    {
+      "departure": "成都",
+      "destination": "北京",
+      "duration": "2h50m",
+      "base_price": 1180,
+      "hours": 2,
+      "minutes": 50
+    },
+    {
+      "departure": "成都",
+      "destination": "广州",
+      "duration": "2h30m",
+      "base_price": 980,
+      "hours": 2,
+      "minutes": 30
+    },
+    {
+      "departure": "西安",
+      "destination": "北京",
+      "duration": "2h15m",
+      "base_price": 880,
+      "hours": 2,
+      "minutes": 15
+    },
+    {
+      "departure": "三亚",
+      "destination": "北京",
+      "duration": "4h00m",
+      "base_price": 1880,
+      "hours": 4,
+      "minutes": 0
+    },
+    {
+      "departure": "长沙",
+      "destination": "广州",
+      "duration": "1h20m",
+      "base_price": 480,
+      "hours": 1,
+      "minutes": 20
+    }
+  ],
+  "airports": {
+    "北京": "首都T3",
+    "上海": "虹桥T2",
+    "广州": "白云T2",
+    "深圳": "宝安T3",
+    "成都": "双流T2",
+    "长沙": "黄花T2",
+    "杭州": "萧山T3",
+    "西安": "咸阳T3",
+    "三亚": "凤凰T2",
+    "厦门": "高崎T3",
+    "青岛": "流亭T2",
+    "丽江": "丽江机场",
+    "大理": "大理机场",
+    "昆明": "长水T2",
+    "哈尔滨": "太平T2",
+    "重庆": "江北T3",
+    "武汉": "天河T3",
+    "南京": "南京机场",
+    "苏州": "苏州机场",
+    "桂林": "桂林机场"
+  },
+  "flight_time_slots": [
+    "06:30",
+    "08:00",
+    "09:30",
+    "11:00",
+    "13:00",
+    "14:30",
+    "16:00",
+    "17:30",
+    "19:00",
+    "21:00"
+  ]
+}
