@@ -15,6 +15,7 @@ import httpx
 
 import settings
 from data.place_catalog import CITIES
+from services.ai_config import AiConfig
 
 _DRAFT_START = "<<DRAFT>>"
 _DRAFT_END = "<<END>>"
@@ -32,12 +33,24 @@ _SYSTEM_PROMPT = (
 )
 
 
-def reply(messages: list[dict], prefs: dict | None = None) -> dict:
+def reply(
+    messages: list[dict],
+    prefs: dict | None = None,
+    ai_config: AiConfig | None = None,
+) -> dict:
     cleaned = _validate_messages(messages)
 
-    if str(settings.DEEPSEEK_API_KEY or "").strip():
+    cfg = ai_config
+    if cfg is None and str(settings.DEEPSEEK_API_KEY or "").strip():
+        cfg = AiConfig(
+            base_url=settings.DEEPSEEK_BASE_URL,
+            api_key=settings.DEEPSEEK_API_KEY,
+            model=settings.DEEPSEEK_MODEL,
+        )
+
+    if cfg is not None:
         try:
-            return _ask_deepseek(cleaned)
+            return _ask_llm(cleaned, cfg)
         except Exception:
             pass
 
@@ -63,15 +76,15 @@ def _validate_messages(messages: list[dict]) -> list[dict]:
     return cleaned
 
 
-def _ask_deepseek(messages: list[dict]) -> dict:
+def _ask_llm(messages: list[dict], cfg: AiConfig) -> dict:
     payload = {
-        "model": settings.DEEPSEEK_MODEL,
+        "model": cfg.model,
         "messages": [{"role": "system", "content": _SYSTEM_PROMPT}, *messages],
         "temperature": 0.7,
     }
     response = httpx.post(
-        settings.DEEPSEEK_BASE_URL,
-        headers={"Authorization": f"Bearer {settings.DEEPSEEK_API_KEY}"},
+        cfg.base_url,
+        headers={"Authorization": f"Bearer {cfg.api_key}"},
         json=payload,
         timeout=settings.DEEPSEEK_TIMEOUT_S,
     )

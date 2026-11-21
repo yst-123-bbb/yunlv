@@ -1,1 +1,15 @@
-requests>=2.28.0
+requests>=2.28.0fastapi
+uvicorn[standard]
+pydantic>=2
+pydantic-settings
+httpx
+beautifulsoup4
+trafilatura
+playwright
+ics
+reportlab
+python-dotenv
+instructor>=1.17.0
+edge-tts>=7.3.1
+networkx>=3.7
+faster-whisper>=1.2.1

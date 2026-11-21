@@ -5,9 +5,9 @@ from __future__ import annotations
 from collections.abc import Callable
 from typing import Any
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 
-from services import catalog_service
+from services import ai_config, catalog_service, reco_service
 
 router = APIRouter(prefix="/api", tags=["catalog"])
 
@@ -49,3 +49,14 @@ def search(q: str) -> dict[str, list[dict]]:
 @router.get("/search/hot")
 def hot() -> dict[str, list[dict]]:
     return _call(catalog_service.hot)
+
+@router.get("/attractions/{name}/xiaohongshu")
+def attraction_xiaohongshu(name: str, request: Request) -> dict:
+    cfg = ai_config.from_headers(request.headers)
+    return _call(reco_service.attraction_reco, name, cfg)
+
+
+@router.get("/cities/{name}/xiaohongshu")
+def city_xiaohongshu(name: str, request: Request) -> dict:
+    cfg = ai_config.from_headers(request.headers)
+    return _call(reco_service.city_reco, name, cfg)

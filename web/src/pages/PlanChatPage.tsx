@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { apiPost, ApiError } from "../api/client";
 import { sendChat } from "../api/catalog";
 import type { ChatDraft } from "../api/catalog";
-import { readPrefs } from "../storage/localStore";
+import { isAiReady, readAiConfig, readPrefs } from "../storage/localStore";
+
+const AI_MISSING_TIP = "请先在「我的 → AI 接入」填写 API Key 后再制定计划";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -33,6 +35,9 @@ export default function PlanChatPage() {
   const [sending, setSending] = useState(false);
   const [generating, setGenerating] = useState(false);
   const [error, setError] = useState("");
+  const [blocked, setBlocked] = useState(false);
+
+  const aiFallback = !isAiReady() && readAiConfig().allow_local_fallback;
 
   useEffect(() => {
     const node = listRef.current;
@@ -64,6 +69,13 @@ export default function PlanChatPage() {
   async function handleGenerate() {
     if (!draft || generating) return;
 
+    if (!isAiReady() && !readAiConfig().allow_local_fallback) {
+      setBlocked(true);
+      setError(AI_MISSING_TIP);
+      return;
+    }
+    setBlocked(false);
+
     setGenerating(true);
     setError("");
     try {
@@ -76,12 +88,25 @@ export default function PlanChatPage() {
   }
 
   return (
-    <section className="card">
-      <h2 className="cardTitle">自由制定</h2>
+    <section className="card planCard planChat">
+      <header className="chatHeader">
+        <h1 className="chatTitle">自由对话</h1>
+        <p className="planHint">和助手聊需求，信息齐了即可生成行程</p>
+      </header>
+
+      {aiFallback ? <p className="muted">当前未接入 AI，将使用本地规则生成</p> : null}
 
       {error ? (
         <p className="errorBar" role="alert">
           {error}
+        </p>
+      ) : null}
+
+      {blocked ? (
+        <p>
+          <button type="button" className="btn btnPrimary" onClick={() => navigate("/me/ai")}>
+            前往「我的 → AI 接入」设置
+          </button>
         </p>
       ) : null}
 
@@ -101,18 +126,19 @@ export default function PlanChatPage() {
 
       <form className="chatInputRow" onSubmit={handleSend}>
         <input
+          className="chatInput"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="例如：从北京出发去大理玩 4 天，两个人，人均 4000 元"
           aria-label="对话输入"
         />
-        <button type="submit" className="btn btnPrimary" disabled={sending || !input.trim()}>
+        <button type="submit" className="btn btnPrimary chatSendBtn" disabled={sending || !input.trim()}>
           发送
         </button>
       </form>
 
       {draft ? (
-        <div className="field fieldWide">
+        <div className="chatGenerateBar">
           <p className="muted">已收集需求：{draftSummary(draft)}</p>
           <button type="button" className="btn btnPrimary" onClick={handleGenerate} disabled={generating}>
             {generating ? "正在生成行程…" : "生成行程"}

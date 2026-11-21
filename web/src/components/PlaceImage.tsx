@@ -1,32 +1,42 @@
 import { useEffect, useState } from "react";
 import { cityInitial, cityTheme } from "../theme/palette";
 
+type Stage = "local" | "remote" | "none";
+
 export default function PlaceImage({
   src,
   name,
   city,
   className = "",
   ratio = "16 / 10",
+  fallbackSrc,
 }: {
   src?: string;
   name: string;
   city?: string;
   className?: string;
   ratio?: string;
+  fallbackSrc?: string;
 }) {
-  const [failed, setFailed] = useState(false);
+  const [stage, setStage] = useState<Stage>(src ? "local" : "none");
 
-  // A new place may well have a working image, so a previous failure must not stick.
+  // A new place may well have a working image, so previous failures must not stick.
   useEffect(() => {
-    setFailed(false);
-  }, [name]);
+    setStage(src ? "local" : "none");
+  }, [name, src]);
 
   const theme = cityTheme(city || name);
+  const current = stage === "local" ? src : stage === "remote" ? fallbackSrc : undefined;
+
+  function onError() {
+    if (stage === "local" && fallbackSrc && fallbackSrc !== src) setStage("remote");
+    else setStage("none");
+  }
 
   return (
     <div className={"placeImage " + className} style={{ aspectRatio: ratio }}>
-      {src && !failed ? (
-        <img src={src} alt={name} loading="lazy" onError={() => setFailed(true)} />
+      {current ? (
+        <img src={current} alt={name} loading="lazy" onError={onError} />
       ) : (
         <div
           className="placeImageFallback"

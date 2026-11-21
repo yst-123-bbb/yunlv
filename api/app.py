@@ -12,6 +12,7 @@ from datastore.db import connect, init_db
 from infra.logging_setup import get_logger, log_event, new_req_id
 
 from api.routers import (
+    ai,
     budget,
     export,
     notes,
@@ -82,6 +83,9 @@ for _module_name in ("catalog", "comments", "chat"):
     except ImportError:
         continue
     app.include_router(_module.router)
+
+# C-AI-BACKEND@1: AI 连通性测试
+app.include_router(ai.router)
 
 
 @app.middleware("http")

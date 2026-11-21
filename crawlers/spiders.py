@@ -12,6 +12,7 @@
 import sys
 import os
 import random
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 _BASE = os.path.dirname(_THIS_DIR)
@@ -351,32 +352,55 @@ def crawl_all(departure, destination, show_progress=True, user_data=None):
 
     results = {}
 
-    # 交通
-    print("  [1/4] 交通方案...")
-    results["trains"] = crawl_train(departure, destination)
-    results["flights"] = crawl_flight(departure, destination)
-    print("  ✓ 高铁 " + str(len(results["trains"])) + "条 + 航班 " + str(len(results["flights"])) + "条")
+    if show_progress:
+        # 交通
+        print("  [1/4] 交通方案...")
+        results["trains"] = crawl_train(departure, destination)
+        results["flights"] = crawl_flight(departure, destination)
+        print("  ✓ 高铁 " + str(len(results["trains"])) + "条 + 航班 " + str(len(results["flights"])) + "条")
 
-    # 景点
-    print()
-    print("  [2/4] 景点信息...")
-    results["attractions"] = crawl_attractions(
-        destination, show_progress=show_progress, user_data=user_data
-    )
+        # 景点
+        print()
+        print("  [2/4] 景点信息...")
+        results["attractions"] = crawl_attractions(
+            destination, show_progress=show_progress, user_data=user_data
+        )
 
-    # 美食
-    print()
-    print("  [3/4] 美食餐厅...")
-    results["foods"] = crawl_food(
-        destination, show_progress=show_progress, user_data=user_data
-    )
+        # 美食
+        print()
+        print("  [3/4] 美食餐厅...")
+        results["foods"] = crawl_food(
+            destination, show_progress=show_progress, user_data=user_data
+        )
 
-    # 酒店
-    print()
-    print("  [4/4] 住宿酒店...")
-    results["hotels"] = crawl_hotels(
-        destination, show_progress=show_progress, user_data=user_data
-    )
+        # 酒店
+        print()
+        print("  [4/4] 住宿酒店...")
+        results["hotels"] = crawl_hotels(
+            destination, show_progress=show_progress, user_data=user_data
+        )
+    else:
+        tasks = {
+            "trains": lambda: crawl_train(departure, destination),
+            "flights": lambda: crawl_flight(departure, destination),
+            "attractions": lambda: crawl_attractions(
+                destination, show_progress=False, user_data=user_data
+            ),
+            "foods": lambda: crawl_food(
+                destination, show_progress=False, user_data=user_data
+            ),
+            "hotels": lambda: crawl_hotels(
+                destination, show_progress=False, user_data=user_data
+            ),
+        }
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            future_key = {executor.submit(fn): key for key, fn in tasks.items()}
+            for future in as_completed(future_key):
+                key = future_key[future]
+                try:
+                    results[key] = future.result()
+                except Exception:
+                    results[key] = []
 
     print()
     print("  " + "=" * 56)

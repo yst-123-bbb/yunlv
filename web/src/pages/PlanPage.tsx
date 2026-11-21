@@ -11,6 +11,7 @@ import TimelineMap from "../components/TimelineMap";
 import ItineraryEditor from "../components/ItineraryEditor";
 import CorrectionForm from "../components/CorrectionForm";
 import Toast from "../components/Toast";
+import BackBar from "../components/BackBar";
 import { isFavorite, toggleFavorite } from "../storage/localStore";
 
 const BUDGET_ROWS: { key: keyof NonNullable<PlanSession["budget"]>; label: string }[] = [
@@ -275,18 +276,28 @@ export default function PlanPage() {
     [templateName, activeSessionId],
   );
 
-  if (loading && !state) return <p className="muted">正在读取行程…</p>;
+  if (loading && !state) {
+    return (
+      <>
+        <BackBar to="/plan/quick" />
+        <p className="muted">正在读取行程…</p>
+      </>
+    );
+  }
 
   if (!state) {
     return (
-      <section className="card">
-        <p className="errorBar" role="alert">
-          {error || "暂无行程数据"}
-        </p>
-        <Link className="btn btnGhost" to="/">
-          返回重新填写
-        </Link>
-      </section>
+      <>
+        <BackBar to="/plan/quick" />
+        <section className="card">
+          <p className="errorBar" role="alert">
+            {error || "暂无行程数据"}
+          </p>
+          <Link className="btn btnGhost" to="/">
+            返回重新填写
+          </Link>
+        </section>
+      </>
     );
   }
 
@@ -294,13 +305,16 @@ export default function PlanPage() {
 
   if (state.stage < 6) {
     return (
-      <PlanProgress
-        stage={state.stage}
-        error={progressError || undefined}
-        waitedSeconds={waitedSeconds}
-        onRetry={handleRetry}
-        retrying={retrying}
-      />
+      <>
+        <BackBar to="/plan/quick" />
+        <PlanProgress
+          stage={state.stage}
+          error={progressError || undefined}
+          waitedSeconds={waitedSeconds}
+          onRetry={handleRetry}
+          retrying={retrying}
+        />
+      </>
     );
   }
 
@@ -310,7 +324,9 @@ export default function PlanPage() {
   const cutTier = tiers ? tiers.tiers.find((t) => t.fit === "within") ?? tiers.tiers[0] : null;
 
   return (
-    <div className="planLayout">
+    <>
+      <BackBar to="/plan/quick" />
+      <div className="planLayout">
       <section className="card">
         <div className="pageHeader">
           <h2 className="cardTitle">
@@ -555,6 +571,7 @@ export default function PlanPage() {
       </section>
 
       {toast ? <Toast message={toast} onClose={handleToastClose} /> : null}
-    </div>
+      </div>
+    </>
   );
 }

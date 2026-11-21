@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { apiGet, ApiError } from "../api/client";
 import type { PlanSession } from "../api/client";
+import BackBar from "../components/BackBar";
 
 const MAX_TEMPLATES = 3;
 
@@ -94,10 +95,19 @@ export default function ComparePage() {
 
   const columns = selected.filter((name) => states[name] !== undefined);
 
-  if (loading) return <p className="muted">正在读取模板…</p>;
+  if (loading) {
+    return (
+      <>
+        <BackBar to="/plan/quick" />
+        <p className="muted">正在读取模板…</p>
+      </>
+    );
+  }
 
   return (
-    <div className="planLayout">
+    <>
+      <BackBar to="/plan/quick" />
+      <div className="planLayout">
       <section className="card">
         <h2 className="cardTitle">模板对比</h2>
         <p className="muted">选择 2–3 个模板，对比交通 / 住宿 / 门票 / 餐饮与总额。</p>
@@ -171,6 +181,7 @@ export default function ComparePage() {
           </table>
         </section>
       )}
-    </div>
+      </div>
+    </>
   );
 }

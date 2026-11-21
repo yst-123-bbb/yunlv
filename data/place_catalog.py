@@ -6,6 +6,9 @@
 
 from __future__ import annotations
 
+import json
+import os
+
 CITIES: list[dict] = [
     {
         "name": "北京",
@@ -126,6 +129,18 @@ CITIES: list[dict] = [
         "province": "广西壮族自治区",
         "tag": "山水甲天下",
         "spots": ["漓江", "阳朔", "象鼻山"],
+    },
+    {
+        "name": "香港",
+        "province": "香港特别行政区",
+        "tag": "东方之珠",
+        "spots": ["维多利亚港", "太平山顶", "香港迪士尼乐园"],
+    },
+    {
+        "name": "澳门",
+        "province": "澳门特别行政区",
+        "tag": "中葡交融小城",
+        "spots": ["大三巴牌坊", "澳门旅游塔", "官也街"],
     },
 ]
 
@@ -1139,3 +1154,38 @@ ATTRACTIONS: dict[str, list[dict]] = {
         },
     ],
 }
+
+# ---------------------------------------------------------------------------
+# 真实景点数据覆盖层
+#
+# 上面的 ATTRACTIONS 中，广州/深圳/成都等 17 个城市仍是
+# 「{城市}博物馆 / {城市}步行街 / {城市}公园 / {城市}古城景区」的模板占位，
+# 不是真实景点。真实数据放在 ``data/real_places/*.json``，每个文件按城市提供
+# 完整景点列表，导入时覆盖同名城市的模板数据。
+#
+# 文件缺失、JSON 损坏或字段缺失时静默跳过，保证目录始终可用。
+# ---------------------------------------------------------------------------
+_REAL_PLACES_DIR = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "real_places"
+)
+
+
+def _load_real_places() -> None:
+    if not os.path.isdir(_REAL_PLACES_DIR):
+        return
+    for filename in sorted(os.listdir(_REAL_PLACES_DIR)):
+        if not filename.endswith(".json"):
+            continue
+        try:
+            with open(os.path.join(_REAL_PLACES_DIR, filename), encoding="utf-8") as fp:
+                payload = json.load(fp)
+        except (OSError, ValueError):
+            continue
+        if not isinstance(payload, dict):
+            continue
+        for city_name, items in payload.items():
+            if isinstance(items, list) and items:
+                ATTRACTIONS[city_name] = items
+
+
+_load_real_places()

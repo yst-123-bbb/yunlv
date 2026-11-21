@@ -3,6 +3,9 @@ import type { FormEvent } from "react";
 import { Link } from "react-router-dom";
 import {
   TASTE_OPTIONS,
+  isAiReady,
+  maskApiKey,
+  readAiConfig,
   readFavorites,
   readPrefs,
   readTodos,
@@ -62,6 +65,8 @@ export default function MePage() {
 
   const [todos, setTodos] = useState<TodoSpot[]>(() => readTodos());
   const [favorites, setFavorites] = useState<Favorite[]>(() => readFavorites());
+  const [aiConfig] = useState(() => readAiConfig());
+  const [aiReady] = useState(() => isAiReady());
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -92,6 +97,20 @@ export default function MePage() {
       <header className="pageHeader">
         <h2>我的</h2>
       </header>
+
+      <section className="card">
+        <h2 className="cardTitle">AI 接入</h2>
+        <p className={aiReady ? "placeCardMeta" : "muted"}>
+          {aiReady
+            ? `已接入 · 模型 ${aiConfig.model} · Key ${maskApiKey(aiConfig.api_key)}`
+            : "未接入 · 填写 API Key 后才能让 AI 帮你制定计划"}
+        </p>
+        <div className="chipRow">
+          <Link className="btn btnPrimary" to="/me/ai">
+            {aiReady ? "管理 AI 配置" : "去接入 AI"}
+          </Link>
+        </div>
+      </section>
 
       <section className="card">
         <h2 className="cardTitle">出行偏好</h2>

@@ -13,6 +13,7 @@ import os
 import json
 import random
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 _BASE = os.path.dirname(_THIS_DIR)
@@ -293,22 +294,42 @@ def search_poi_multi(city, keywords, poi_type="景点", limit_per_kw=8,
     Returns:
         标准化后的POI列表（按评分排序）
     """
-    all_results = []
-    for kw in keywords:
+    if not keywords:
+        return []
+
+    def _search_one(kw):
         try:
             if show_progress:
                 cprint_inner("  → 搜索: " + kw + "...", "OKCYAN")
             cache_key = "poi_" + city + "_" + poi_type + "_" + kw
             results = _cached(cache_key, search_poi_single, city, kw, poi_type, limit_per_kw) if HAS_CACHE \
                 else search_poi_single(city, kw, poi_type, limit_per_kw)
-            if results:
-                all_results.extend(results)
-                if show_progress:
-                    cprint_inner("    ✓ " + str(len(results)) + " 条", "OKGREEN")
         except Exception as e:
             if show_progress:
                 cprint_inner("    ✗ " + str(e), "WARNING")
-            continue
+            return []
+        if results and show_progress:
+            cprint_inner("    ✓ " + str(len(results)) + " 条", "OKGREEN")
+        return results or []
+
+    # 按关键词索引回填，保证结果顺序与串行版一致
+    slots = [None] * len(keywords)
+    with ThreadPoolExecutor(max_workers=min(len(keywords), 6)) as executor:
+        future_index = {executor.submit(_search_one, kw): idx
+                        for idx, kw in enumerate(keywords)}
+        for future in as_completed(future_index):
+            idx = future_index[future]
+            try:
+                slots[idx] = future.result()
+            except Exception as e:
+                if show_progress:
+                    cprint_inner("    ✗ " + str(e), "WARNING")
+                slots[idx] = []
+
+    all_results = []
+    for slot in slots:
+        if slot:
+            all_results.extend(slot)
 
     if not all_results:
         return []

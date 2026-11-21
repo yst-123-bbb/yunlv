@@ -7,8 +7,23 @@ export const TASTE_OPTIONS: { value: string; label: string }[] = [
   { value: "hotpot", label: "火锅" },
   { value: "bbq", label: "烧烤" },
   { value: "noodles", label: "面食" },
+  { value: "rice", label: "米线米粉" },
   { value: "veggie", label: "素食" },
+  { value: "meat", label: "大肉硬菜" },
+  { value: "soup", label: "汤羹炖品" },
+  { value: "street", label: "小吃夜市" },
   { value: "drinks", label: "饮品甜点" },
+  { value: "coffee", label: "咖啡" },
+  { value: "sichuan", label: "川湘菜" },
+  { value: "cantonese", label: "粤菜" },
+  { value: "jiangzhe", label: "江浙菜" },
+  { value: "northwest", label: "西北菜" },
+  { value: "northeast", label: "东北菜" },
+  { value: "japanese", label: "日料" },
+  { value: "korean", label: "韩餐" },
+  { value: "western", label: "西餐" },
+  { value: "southeast", label: "东南亚菜" },
+  { value: "halal", label: "清真" },
 ];
 
 export interface Prefs {
@@ -225,4 +240,50 @@ export function removeTodo(name: string): void {
     TODOS_KEY,
     JSON.stringify(readTodos().filter((entry) => entry.name !== name)),
   );
+}
+export interface AiConfig {
+  base_url: string;
+  api_key: string;
+  model: string;
+  allow_local_fallback: boolean;
+}
+
+export const AI_CONFIG_KEY = "yunlv.aiConfig";
+
+export const AI_DEFAULT_CONFIG: AiConfig = {
+  base_url: "https://api.deepseek.com/v1/chat/completions",
+  api_key: "",
+  model: "deepseek-chat",
+  allow_local_fallback: false,
+};
+
+export function readAiConfig(): AiConfig {
+  const parsed = safeParse<unknown>(safeRead(AI_CONFIG_KEY));
+  if (!parsed || typeof parsed !== "object") return { ...AI_DEFAULT_CONFIG };
+  const raw = parsed as Partial<Record<keyof AiConfig, unknown>>;
+  return {
+    base_url: typeof raw.base_url === "string" ? raw.base_url : AI_DEFAULT_CONFIG.base_url,
+    api_key: typeof raw.api_key === "string" ? raw.api_key : AI_DEFAULT_CONFIG.api_key,
+    model: typeof raw.model === "string" ? raw.model : AI_DEFAULT_CONFIG.model,
+    allow_local_fallback: typeof raw.allow_local_fallback === "boolean" ? raw.allow_local_fallback : false,
+  };
+}
+
+export function writeAiConfig(patch: Partial<AiConfig>): AiConfig {
+  const merged: AiConfig = { ...readAiConfig(), ...patch };
+  safeWrite(AI_CONFIG_KEY, JSON.stringify(merged));
+  return merged;
+}
+
+export function clearAiConfig(): void {
+  safeRemove(AI_CONFIG_KEY);
+}
+
+export function isAiReady(): boolean {
+  return readAiConfig().api_key.trim().length > 0;
+}
+
+export function maskApiKey(key: string): string {
+  const trimmed = key.trim();
+  return trimmed.length <= 8 ? "••••" : `••••${trimmed.slice(-4)}`;
 }

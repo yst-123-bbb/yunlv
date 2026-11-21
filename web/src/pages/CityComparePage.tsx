@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ApiError } from "../api/client";
 import { fetchCities, fetchCity } from "../api/catalog";
 import type { Attraction, CityBrief } from "../api/catalog";
+import BackBar from "../components/BackBar";
 import EmptyState from "../components/EmptyState";
 import Skeleton from "../components/Skeleton";
 import { cityInitial, cityTheme } from "../theme/palette";
@@ -79,39 +80,52 @@ export default function CityComparePage() {
     setParams(next);
   }
 
-  if (loading) return <Skeleton lines={6} />;
+  if (loading)
+    return (
+      <>
+        <BackBar to="/" />
+        <Skeleton lines={6} />
+      </>
+    );
 
   if (error) {
     return (
-      <section className="card">
-        <p className="errorBar" role="alert">
-          {error}
-        </p>
-        <Link className="btn btnGhost" to="/">
-          返回首页
-        </Link>
-      </section>
+      <>
+        <BackBar to="/" />
+        <section className="card">
+          <p className="errorBar" role="alert">
+            {error}
+          </p>
+          <Link className="btn btnGhost" to="/">
+            返回首页
+          </Link>
+        </section>
+      </>
     );
   }
 
   if (missing) {
     return (
-      <EmptyState
-        emoji="🗺️"
-        title="未找到要对比的城市"
-        hint="所选城市暂不在目录中，请重新选择。"
-        action={
-          <Link className="btn btnPrimary" to="/cities/compare">
-            重新选择城市
-          </Link>
-        }
-      />
+      <>
+        <BackBar to="/" />
+        <EmptyState
+          emoji="🗺️"
+          title="未找到要对比的城市"
+          hint="所选城市暂不在目录中，请重新选择。"
+          action={
+            <Link className="btn btnPrimary" to="/cities/compare">
+              重新选择城市
+            </Link>
+          }
+        />
+      </>
     );
   }
 
   if (!left || !right) {
     return (
       <div className="fadeIn">
+        <BackBar to="/" />
         <header className="heroBanner">
           <h1 className="heroTitle">城市对比</h1>
           <p className="heroSub">选择两座城市，并排查看省份、看点与代表景点。</p>
@@ -143,6 +157,7 @@ export default function CityComparePage() {
 
   return (
     <div className="fadeIn">
+      <BackBar to="/" />
       <header className="heroBanner">
         <h1 className="heroTitle">城市对比</h1>
         <p className="heroSub">

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { apiGet, apiPost } from "../api/client";
+import BackBar from "../components/BackBar";
 
 interface ReviewItem {
   id: number;
@@ -79,7 +80,9 @@ export default function ReviewAdminPage() {
   }
 
   return (
-    <div className="planLayout">
+    <>
+      <BackBar to="/" />
+      <div className="planLayout">
       <section className="card">
         <h2 className="cardTitle">待审纠错（{items.length}）</h2>
         {error && (
@@ -146,6 +149,7 @@ export default function ReviewAdminPage() {
           </article>
         ))}
       </section>
-    </div>
+      </div>
+    </>
   );
 }

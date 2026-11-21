@@ -20,6 +20,7 @@ export interface Attraction {
   indoor: boolean;
   likes: number;
   image?: string;
+  image_fallback?: string;
   image_meta?: { source_url?: string; author?: string; license?: string };
 }
 

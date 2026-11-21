@@ -3,8 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import { ApiError } from "../api/client";
 import { fetchCity, fetchComments } from "../api/catalog";
 import type { Attraction, CityBrief, Comment } from "../api/catalog";
+import BackBar from "../components/BackBar";
 import EmptyState from "../components/EmptyState";
 import PlaceImage from "../components/PlaceImage";
+import RecoBlock from "../components/RecoBlock";
 import Skeleton from "../components/Skeleton";
 import { cityInitial, cityTheme, openState, tagEmoji } from "../theme/palette";
 
@@ -56,44 +58,62 @@ export default function CityPage() {
     };
   }, [name]);
 
-  if (loading) return <Skeleton lines={6} />;
+  if (loading)
+    return (
+      <>
+        <BackBar to="/" />
+        <Skeleton lines={6} />
+      </>
+    );
 
   if (notFound) {
     return (
-      <EmptyState
-        emoji="🗺️"
-        title="未找到该城市"
-        hint={`城市「${name}」暂不在目录中。`}
-        action={
-          <Link className="btn btnPrimary" to="/">
-            返回首页
-          </Link>
-        }
-      />
+      <>
+        <BackBar to="/" />
+        <EmptyState
+          emoji="🗺️"
+          title="未找到该城市"
+          hint={`城市「${name}」暂不在目录中。`}
+          action={
+            <Link className="btn btnPrimary" to="/">
+              返回首页
+            </Link>
+          }
+        />
+      </>
     );
   }
 
   if (error) {
     return (
-      <section className="card">
-        <p className="errorBar" role="alert">
-          {error}
-        </p>
-        <Link className="btn btnGhost" to="/">
-          返回首页
-        </Link>
-      </section>
+      <>
+        <BackBar to="/" />
+        <section className="card">
+          <p className="errorBar" role="alert">
+            {error}
+          </p>
+          <Link className="btn btnGhost" to="/">
+            返回首页
+          </Link>
+        </section>
+      </>
     );
   }
 
   if (!city) {
-    return <EmptyState emoji="🗺️" title="暂无城市信息" hint="稍后再试或返回首页浏览其他城市。" />;
+    return (
+      <>
+        <BackBar to="/" />
+        <EmptyState emoji="🗺️" title="暂无城市信息" hint="稍后再试或返回首页浏览其他城市。" />
+      </>
+    );
   }
 
   const theme = cityTheme(city.name);
 
   return (
     <div className="fadeIn">
+      <BackBar to="/" />
       <header
         className="heroBanner"
         style={{ background: `linear-gradient(135deg, ${theme.from}, ${theme.to})` }}
@@ -149,6 +169,7 @@ export default function CityPage() {
               >
                 <PlaceImage
                   src={attraction.image}
+                  fallbackSrc={attraction.image_fallback}
                   name={attraction.name}
                   city={attraction.city}
                 />
@@ -168,6 +189,8 @@ export default function CityPage() {
           })}
         </div>
       )}
+
+      <RecoBlock kind="city" name={city.name} />
 
       {comments.length > 0 ? (
         <>

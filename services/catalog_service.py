@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from data.attraction_images import image_meta, image_url
+from data.attraction_images import image_meta, image_remote_url, image_url
 from data.place_catalog import ATTRACTIONS, CITIES
 
 _SEARCH_LIMIT = 20
@@ -11,7 +11,13 @@ _HOT_ATTRACTION_LIMIT = 10
 
 
 def _attraction_out(city_name: str, item: dict, with_meta: bool = False) -> dict:
-    out = {**item, "tags": list(item["tags"]), "city": city_name, "image": image_url(item["name"])}
+    out = {
+        **item,
+        "tags": list(item["tags"]),
+        "city": city_name,
+        "image": image_url(item["name"]),
+        "image_fallback": image_remote_url(item["name"]),
+    }
     if with_meta:
         out["image_meta"] = image_meta().get(item["name"]) or {}
     return out

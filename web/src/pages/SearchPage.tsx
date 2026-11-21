@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ApiError } from "../api/client";
 import { fetchHot, searchAll, suggestPlaces } from "../api/catalog";
 import type { Attraction, CityBrief } from "../api/catalog";
+import BackBar from "../components/BackBar";
 import EmptyState from "../components/EmptyState";
 import PlaceImage from "../components/PlaceImage";
 import Skeleton from "../components/Skeleton";
@@ -132,58 +133,75 @@ export default function SearchPage() {
   const hasResults = cities.length > 0 || attractions.length > 0;
 
   return (
-    <div>
-      <header className="pageHeader">
-        <h1>搜索</h1>
-        <form
-          className="heroSearch"
-          onSubmit={(event) => {
-            event.preventDefault();
-            submit(draft);
-          }}
-        >
-          <input
-            value={draft}
-            placeholder="搜城市或景点，例如：北京 / 故宫"
-            onChange={(event) => setDraft(event.target.value)}
-            aria-label="搜索关键词"
-          />
-          <button className="btn btnPrimary" type="submit">
-            搜索
-          </button>
-        </form>
+    <div className="searchPage">
+      <BackBar to="/" />
+
+      <form
+        className="searchBox"
+        onSubmit={(event) => {
+          event.preventDefault();
+          submit(draft);
+        }}
+      >
+        <input
+          className="searchInput"
+          value={draft}
+          placeholder="搜城市或景点，例如：北京 / 故宫"
+          onChange={(event) => setDraft(event.target.value)}
+          aria-label="搜索关键词"
+        />
+        <button className="btn btnPrimary searchSubmit" type="submit">
+          搜索
+        </button>
         {suggestions && (suggestions.cities.length > 0 || suggestions.attractions.length > 0) && (
-          <div className="chipRow fadeIn">
-            {suggestions.cities.map((city) => (
-              <button key={`city-${city.name}`} type="button" className="chip" onClick={() => reuse(city.name)}>
-                {tagEmoji(city.tag)} {city.name}
-              </button>
-            ))}
-            {suggestions.attractions.map((item) => (
-              <button
-                key={`attraction-${item.city}-${item.name}`}
-                type="button"
-                className="chip"
-                onClick={() => reuse(item.name)}
-              >
-                {tagEmoji(item.tags[0] ?? "")} {item.name}
-              </button>
-            ))}
+          <div className="searchSuggest">
+            {suggestions.cities.length > 0 && (
+              <div className="searchSuggestGroup">
+                <span className="searchSuggestLabel">城市</span>
+                <div className="chipRow">
+                  {suggestions.cities.map((city) => (
+                    <button key={`city-${city.name}`} type="button" className="chip" onClick={() => reuse(city.name)}>
+                      {tagEmoji(city.tag)} {city.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+            {suggestions.attractions.length > 0 && (
+              <div className="searchSuggestGroup">
+                <span className="searchSuggestLabel">景点</span>
+                <div className="chipRow">
+                  {suggestions.attractions.map((item) => (
+                    <button
+                      key={`attraction-${item.city}-${item.name}`}
+                      type="button"
+                      className="chip"
+                      onClick={() => reuse(item.name)}
+                    >
+                      {tagEmoji(item.tags[0] ?? "")} {item.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
-      </header>
+      </form>
 
-      {history.length > 0 && (
-        <section className="card">
+      {history.length > 0 && !keyword && (
+        <section className="searchHistory">
+          <div className="searchSectionHead">
+            <span className="searchSectionTitle">最近搜索</span>
+            <button type="button" className="searchClearBtn" onClick={clearHistory}>
+              清空
+            </button>
+          </div>
           <div className="chipRow">
             {history.map((item) => (
               <button key={item} type="button" className="chip" onClick={() => reuse(item)}>
                 {item}
               </button>
             ))}
-            <button type="button" className="chip" onClick={clearHistory}>
-              清空历史
-            </button>
           </div>
         </section>
       )}
@@ -194,19 +212,22 @@ export default function SearchPage() {
         </p>
       )}
 
-      <h2 className="cardTitle">{keyword ? `“${keyword}” 的结果` : "热门推荐"}</h2>
-
-      <div className="chipRow">
-        {RESULT_TABS.map((item) => (
-          <button
-            key={item.value}
-            type="button"
-            className={item.value === tab ? "chip chipActive" : "chip"}
-            onClick={() => setTab(item.value)}
-          >
-            {item.label}
-          </button>
-        ))}
+      <div className="searchResultHead">
+        <h1 className="searchResultTitle">{keyword ? `“${keyword}” 的结果` : "热门推荐"}</h1>
+        <div className="searchTabs" role="tablist">
+          {RESULT_TABS.map((item) => (
+            <button
+              key={item.value}
+              type="button"
+              role="tab"
+              aria-selected={item.value === tab}
+              className={item.value === tab ? "searchTab searchTabActive" : "searchTab"}
+              onClick={() => setTab(item.value)}
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {loading ? (
@@ -215,7 +236,7 @@ export default function SearchPage() {
         <>
           {showCities && cities.length > 0 && (
             <section>
-              <h3>城市</h3>
+              <h2 className="searchGroupTitle">城市</h2>
               <div className="gridCards">
                 {cities.map((city) => (
                   <Link key={city.name} className="placeCard" to={`/city/${encodeURIComponent(city.name)}`}>
@@ -232,7 +253,7 @@ export default function SearchPage() {
 
           {showAttractions && sortedAttractions.length > 0 && (
             <section>
-              <h3>景点</h3>
+              <h2 className="searchGroupTitle">景点</h2>
               <div className="gridCards">
                 {sortedAttractions.map((item) => (
                   <Link

@@ -3,8 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import { ApiError } from "../api/client";
 import { fetchAttraction } from "../api/catalog";
 import type { Attraction } from "../api/catalog";
+import BackBar from "../components/BackBar";
 import EmptyState from "../components/EmptyState";
 import PlaceImage from "../components/PlaceImage";
+import RecoBlock from "../components/RecoBlock";
 import Skeleton from "../components/Skeleton";
 import Toast from "../components/Toast";
 import { isTodo, toggleTodo } from "../storage/localStore";
@@ -61,38 +63,55 @@ export default function AttractionPage() {
     };
   }, [name]);
 
-  if (loading) return <Skeleton lines={6} />;
+  if (loading)
+    return (
+      <>
+        <BackBar to={attraction ? `/city/${encodeURIComponent(attraction.city)}` : "/"} />
+        <Skeleton lines={6} />
+      </>
+    );
 
   if (notFound) {
     return (
-      <EmptyState
-        emoji="📍"
-        title="未找到该景点"
-        hint={`景点「${name}」暂不在目录中。`}
-        action={
-          <Link className="btn btnPrimary" to="/">
-            返回首页
-          </Link>
-        }
-      />
+      <>
+        <BackBar to={attraction ? `/city/${encodeURIComponent(attraction.city)}` : "/"} />
+        <EmptyState
+          emoji="📍"
+          title="未找到该景点"
+          hint={`景点「${name}」暂不在目录中。`}
+          action={
+            <Link className="btn btnPrimary" to="/">
+              返回首页
+            </Link>
+          }
+        />
+      </>
     );
   }
 
   if (error) {
     return (
-      <section className="card">
-        <p className="errorBar" role="alert">
-          {error}
-        </p>
-        <Link className="btn btnGhost" to="/">
-          返回首页
-        </Link>
-      </section>
+      <>
+        <BackBar to={attraction ? `/city/${encodeURIComponent(attraction.city)}` : "/"} />
+        <section className="card">
+          <p className="errorBar" role="alert">
+            {error}
+          </p>
+          <Link className="btn btnGhost" to="/">
+            返回首页
+          </Link>
+        </section>
+      </>
     );
   }
 
   if (!attraction) {
-    return <EmptyState emoji="📍" title="暂无景点信息" hint="稍后再试或返回首页浏览其他景点。" />;
+    return (
+      <>
+        <BackBar to="/" />
+        <EmptyState emoji="📍" title="暂无景点信息" hint="稍后再试或返回首页浏览其他景点。" />
+      </>
+    );
   }
 
   const open = openState(attraction.open_time);
@@ -115,8 +134,10 @@ export default function AttractionPage() {
 
   return (
     <div className="fadeIn">
+      <BackBar to={attraction ? `/city/${encodeURIComponent(attraction.city)}` : "/"} />
       <PlaceImage
         src={attraction.image}
+        fallbackSrc={attraction.image_fallback}
         name={attraction.name}
         city={attraction.city}
         ratio="16 / 9"
@@ -184,6 +205,8 @@ export default function AttractionPage() {
           </ul>
         )}
       </section>
+
+      <RecoBlock kind="attraction" name={attraction.name} />
 
       {meta && (meta.author || meta.license || meta.source_url) ? (
         <p className="muted">

@@ -12,6 +12,7 @@ const PlanHomePage = lazy(() => import("./pages/PlanHomePage"));
 const PlanQuickPage = lazy(() => import("./pages/PlanQuickPage"));
 const PlanChatPage = lazy(() => import("./pages/PlanChatPage"));
 const MePage = lazy(() => import("./pages/MePage"));
+const AiSettingsPage = lazy(() => import("./pages/AiSettingsPage"));
 const SharePage = lazy(() => import("./pages/SharePage"));
 const ReviewAdminPage = lazy(() => import("./pages/ReviewAdminPage"));
 const ComparePage = lazy(() => import("./pages/ComparePage"));
@@ -42,6 +43,7 @@ export default function App() {
             </Route>
             <Route path="/plan/:sessionId" element={<PlanPage />} />
             <Route path="/me" element={<MePage />} />
+            <Route path="/me/ai" element={<AiSettingsPage />} />
             <Route path="/share/:shortId" element={<SharePage />} />
             <Route path="/review" element={<ReviewAdminPage />} />
             <Route path="/compare" element={<ComparePage />} />

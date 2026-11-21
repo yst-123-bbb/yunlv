@@ -1,4 +1,16 @@
+import { isAiReady, readAiConfig } from "../storage/localStore";
+
 const baseUrl = import.meta.env.VITE_API_BASE ?? "";
+
+export function aiHeaders(): Record<string, string> {
+  if (!isAiReady()) return {};
+  const cfg = readAiConfig();
+  return {
+    "X-AI-Base-Url": cfg.base_url,
+    "X-AI-Key": cfg.api_key,
+    "X-AI-Model": cfg.model,
+  };
+}
 
 export interface ItineraryItem {
   name: string;
@@ -70,7 +82,7 @@ async function readDetail(res: Response): Promise<string> {
 }
 
 async function request<T>(method: "GET" | "POST", path: string, body?: unknown): Promise<T> {
-  const headers: Record<string, string> = {};
+  const headers: Record<string, string> = { ...aiHeaders() };
   if (body !== undefined) headers["Content-Type"] = "application/json";
 
   let res: Response;

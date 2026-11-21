@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from typing import Any
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel, Field
 
-from services import chat_service
+from services import ai_config, chat_service
 
 router = APIRouter(prefix="/api", tags=["chat"])
 
@@ -23,8 +23,12 @@ class ChatBody(BaseModel):
 
 
 @router.post("/chat")
-def chat(body: ChatBody) -> dict[str, Any]:
+def chat(body: ChatBody, request: Request) -> dict[str, Any]:
     try:
-        return chat_service.reply([item.model_dump() for item in body.messages], body.prefs)
+        return chat_service.reply(
+            [item.model_dump() for item in body.messages],
+            body.prefs,
+            ai_config.from_headers(request.headers),
+        )
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
